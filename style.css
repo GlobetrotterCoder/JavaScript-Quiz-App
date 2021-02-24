@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Akaya Kanadaka', cursive;
+
+}
+
+:root {
+    --color-neutral: lightblue;
+    --color-correct: rgb(32, 219, 32);
+    --color-wrong: rgb(236, 17, 17);
+}
+
+body {
+    --color: var(--color-neutral);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color);
+}
+
+body.correct {
+    --color: var(--color-correct);
+}
+
+body.wrong{
+    --color: var(--color-wrong);
+}
+
+.container {
+    width: 700px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 0 15px 8px;
+
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --color: var(--color-neutral);
+    border: 4px solid black;
+    background-color: var(--color);
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    font-size: 1.5rem;
+
+}
+
+.btn.correct {
+    --color: var(--color-correct);
+}
+
+.btn.wrong {
+    --color: var(--color-wrong);
+}
+
+.btn:hover{
+    border-color: yellow;
+}
+
+.start-btn, .next-btn {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
